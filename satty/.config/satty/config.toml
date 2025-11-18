@@ -1,0 +1,23 @@
+[general]
+fullscreen = false
+early-exit = false
+initial-tool = "crop"
+copy-command = "wl-copy"
+annotation-size-factor = 2
+output-filename = "~/Pictures/Screenshots/screenshot-%Y-%m-%d_%H:%M:%S.png"
+save-after-copy = false
+default-hide-toolbars = false
+
+[font]
+family = "JetBrains Mono Nerd Font"
+style = "Regular"
+
+[color-palette]
+palette = [
+ "#8aadf4",  # Blue
+ "#ed8796", # Red
+ "#a6da95",  # Green
+ "#eed49f", # Yellow
+ "#c6a0f6",  # Mauve
+ "#cad3f5", # White
+]

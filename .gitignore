@@ -1,0 +1,11 @@
+.zsh_history
+zsh/.zsh/plugins/fsh
+zsh/.zsh/plugins/zsh-autosuggestions
+zsh/.zsh/plugins/zsh-completions
+zsh/.zsh/plugins
+waypaper/.config/waypaper/config.ini
+accels.scm
+renamerrc
+custom_homepage/css/colors.css
+custom_homepage/v1/css/colors.css
+custom_homepage/v2/css/colors.css
