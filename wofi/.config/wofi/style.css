@@ -1,63 +1,63 @@
-@import "/home/alan/.cache/wal/colors-waybar.css";
+@import "/home/roshanbinoj/.cache/wal/colors-waybar.css";
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono Nerd Font;
-    font-size: 15px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrains Mono Nerd Font;
+  font-size: 15px;
 }
 window {
-margin: 0px;
-border: 1px solid @color11;
-border-radius: 10px;
-background-color: alpha(@background,0.4);
+  margin: 0px;
+  border: 1px solid @color11;
+  border-radius: 10px;
+  background-color: alpha(@background, 0.4);
 }
 #input {
-margin: 5px;
-border: none;
-border-radius: 10px;
-color: @color11;
-background-color: alpha(@background,0.4);
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  color: @color11;
+  background-color: alpha(@background, 0.4);
 }
 
 #inner-box {
-margin: 5px;
-border-radius: 10px;
-border: none;
-/* background-color: @color7; */
-background-color: alpha(@background,0.4);
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  /* background-color: @color7; */
+  background-color: alpha(@background, 0.4);
 }
 
 #outer-box {
-margin: 5px;
-border-radius: 10px;
-border: @color8;
-background-color: alpha(@background,0.4);
+  margin: 5px;
+  border-radius: 10px;
+  border: @color8;
+  background-color: alpha(@background, 0.4);
 }
 
 #scroll {
-margin: 0px;
-border: none;
+  margin: 0px;
+  border: none;
 }
 
 #text {
-margin: 5px;
-border: none;
-color: @color11;
-} 
+  margin: 5px;
+  border: none;
+  color: @color11;
+}
 
 #entry.activatable #text {
-color: @color4;
+  color: @color4;
 }
 
 #entry > * {
-color: @color3;
+  color: @color3;
 }
 
 #entry:selected {
-background-color: @color1;
-border-radius: 10px;
+  background-color: @color1;
+  border-radius: 10px;
 }
 
 #entry:selected #text {
-color: @background;
-font-weight: bold;
+  color: @background;
+  font-weight: bold;
 }
