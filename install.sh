@@ -110,36 +110,4 @@ else
     echo "Skipping Post Installation Commands"
 fi
 
-read -r -p "Replace {USER} in CSS files with your username? [y/N]: " -n 1
-echo ""
-
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sleep 1
-    echo "Replacing {USER} in CSS files..."
-    USERNAME=$(whoami)
-
-    # List of CSS files to process (update these paths as needed)
-    CSS_FILES=(
-        "$HOME/.config/swayosd/style.css"
-        "$HOME/.config/waybar/style.css"
-        "$HOME/.config/swaync/style.css"
-        "$HOME/.config/wofi/style.css"
-    )
-
-    for css_file in "${CSS_FILES[@]}"; do
-        if [[ -f "$css_file" ]]; then
-            sed -i "s|roshanbinoj|$USERNAME|g" "$css_file"
-            echo "Updated: $css_file"
-        else
-            echo "File not found, skipping: $css_file"
-        fi
-    done
-
-    echo "CSS files updated successfully!"
-else
-    sleep 1
-    echo "Skipping CSS username replacement."
-fi
-
-
 echo "ENJOY!"
