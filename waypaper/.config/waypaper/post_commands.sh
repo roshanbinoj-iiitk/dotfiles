@@ -7,9 +7,9 @@ killall -SIGUSR2 waybar
 swaync-client -rs
 notify-send -i dialog-information-symbolic "Changing wallpaper and colorscheme" "Waypaper at work"
 pywalfox update
-spicetify apply
+# spicetify apply
 cp ~/.cache/wal/colors-vesktop.css ~/.config/vesktop/themes/pywal-vesktop.theme.css
 python3 ~/dotfiles/VesktopTheme/accentValVesktop.py
 killall swayosd-server
-sleep 0.5
+sleep 2
 swayosd-server

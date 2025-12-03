@@ -2,6 +2,7 @@
 
 @define-color cc-bg @background;
 @define-color noti-border-color @color11;
+@define-color noti-border-accent @color12;
 @define-color noti-bg @background;
 @define-color noti-bg-opaque @background;
 @define-color noti-bg-darker @background;
@@ -15,7 +16,7 @@
 @define-color bg-selected @color1;
 
 * {
-  font-family: Inter;
+  font-family: "Product Sans";
 }
 .notification-row {
   outline: none;
@@ -55,10 +56,10 @@
 .notification-row .notification-background .notification {
   /* The actual notification */
   border-radius: 10px;
-  border: 1px solid @noti-border-color;
+  border: 1px solid @noti-border-accent;
   padding: 0;
   transition: background 0.15s ease-in-out;
-  background: alpha(@noti-bg, 0.65);
+  background: alpha(@noti-bg, 0.8);
 }
 
 .notification-row .notification-background .notification.low {
@@ -368,7 +369,7 @@
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
-  background: alpha(@cc-bg, 0.75);
+  background: alpha(@cc-bg, 0.8);
   color: @text-color;
   border: solid @noti-border-color 1px;
   border-radius: 10px;

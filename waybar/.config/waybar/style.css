@@ -1,62 +1,73 @@
 @import url("colors.css");
+
 /* Dark mode */
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: JetBrains Mono Nerd Font;
-  font-size: 15px;
+  font-family: "Product Sans", "Jetbrains Mono Nerd Font Propo";
+  font-size: 16px;
   font-weight: bolder;
 }
+
 window#waybar {
   background-color: transparent;
   border-bottom: transparent;
-  color: @color3;
+  color: @color13;
 }
 
 #workspaces {
   margin: 2px;
   background-color: transparent;
-  color: @color3;
+  color: @color11;
 }
 
 #workspaces button {
   background-color: transparent;
-  color: @color3;
+  color: @color13;
   margin-left: 2px;
   margin-right: 2px;
+  box-shadow: 0px 2px 4px alpha(@color12, 0);
 }
 
 #workspaces button.active {
-  background-color: transparent;
+  background-color: alpha(@color12, 0.1);
+  box-shadow: 0px 2px 4px alpha(@color12, 0.6);
   border-radius: 10px;
   padding: 0px 15px 0px;
-  transition-property: padding;
-  transition-property: border;
-  transition-duration: 0.25s;
-  color: @color1;
-  border-bottom: 4px solid @color1;
-  border-right: 1px solid @color1;
-  border-left: 1px solid @color1;
+  transition-property: border, padding, color, shadow;
+  transition-duration: 0.2s;
+  color: @color12;
+  border-bottom: 4px solid @color12;
+  border-right: 1px solid @color12;
+  border-left: 1px solid @color12;
 }
 
 .modules-left {
   margin-left: 5px;
   padding: 0px 10px 0px;
-  background-color: alpha(@background, 0.75);
+  background-color: alpha(@background, 0.8);
   border-radius: 10px;
-  border: @color3 solid 1px;
+  border: @color11 solid 1px;
 }
 
 .modules-center {
-  border: @color3 solid 1px;
+  border: @color11 solid 1px;
   padding: 0px 10px 0px;
-  background-color: alpha(@background, 0.75);
+  background-color: alpha(@background, 0.8);
   border-radius: 10px;
+  transition-property: opacity, padding;
+  transition-duration: 0.15s;
+  opacity: 1;
 }
 
 .modules-right {
-  border: @color3 solid 1px;
+  border: @color11 solid 1px;
   padding: 0px 10px 0px;
-  background-color: alpha(@background, 0.75);
+  background-color: alpha(@background, 0.8);
   margin-right: 5px;
   border-radius: 10px;
+}
+
+window#waybar.empty .modules-center {
+  opacity: 0;
+  padding: 0px 40px 0px;
 }
