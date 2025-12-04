@@ -11,5 +11,5 @@ pywalfox update
 cp ~/.cache/wal/colors-vesktop.css ~/.config/vesktop/themes/pywal-vesktop.theme.css
 python3 ~/dotfiles/VesktopTheme/accentValVesktop.py
 killall swayosd-server
-sleep 2
-swayosd-server
+sleep 0.5
+hyprctl dispatch exec swayosd-server
