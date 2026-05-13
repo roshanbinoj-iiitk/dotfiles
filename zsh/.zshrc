@@ -181,3 +181,4 @@ unset __conda_setup
 
 
 . "$HOME/.local/bin/env"
+export PATH="$HOME/.npm-global/bin:$PATH"
