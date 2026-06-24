@@ -182,3 +182,8 @@ unset __conda_setup
 
 . "$HOME/.local/bin/env"
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/roshanbinoj/.lmstudio/bin"
+# End of LM Studio CLI section
+
