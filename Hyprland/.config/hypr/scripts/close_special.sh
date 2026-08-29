@@ -6,5 +6,5 @@ active=$(hyprctl -j monitors | jq --raw-output '.[] | select(.focused==true).spe
 
 
 if [[ ${#active} -gt 0 ]]; then
-    hyprctl dispatch togglespecialworkspace "$active"
+    hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$active\")"
 fi

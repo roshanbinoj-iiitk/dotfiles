@@ -12,4 +12,4 @@ cp ~/.cache/wal/colors-vesktop.css ~/.config/vesktop/themes/pywal-vesktop.theme.
 python3 ~/dotfiles/VesktopTheme/accentValVesktop.py
 killall swayosd-server
 sleep 0.5
-hyprctl dispatch exec swayosd-server
+hyprctl dispatch 'hl.dsp.exec_cmd("swayosd-server")'

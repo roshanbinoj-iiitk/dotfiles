@@ -10,5 +10,5 @@ windows=$(hyprctl clients -j | jq -r ".[] | select(.workspace.id == $current_wor
 
 # Move each window to the target workspace
 for window in $windows; do
-    hyprctl dispatch movetoworkspace "$target_workspace,address:$window"
+    hyprctl dispatch "hl.dsp.window.move({ workspace = \"$target_workspace\", window = \"address:$window\" })"
 done

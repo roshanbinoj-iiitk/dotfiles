@@ -8,7 +8,7 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/power",
-    "hyprland/workspaces",
+    "ext/workspaces",
     "custom/archlogo",
     "hyprland/submap"
   ],
@@ -77,7 +77,7 @@
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "hyprctl dispatch -- exec '[float]' python3 ~/.local/share/Unofficial-Dell-Command-Configure-GUI/main.py"
+    "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"python3 ~/.local/share/Unofficial-Dell-Command-Configure-GUI/main.py\", { float = true })'"
   },
   "network": {
     "format-wifi": "  ",
@@ -86,13 +86,13 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "on-click": "hyprctl dispatch -- exec '[float]' kitty --hold nmtui"
+    "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"kitty --hold nmtui\", { float = true })'"
   },
   "bluetooth": {
     "format": "  ",
     "tooltip-format": " {num_connections} connections ",
     "format-connected-battery": "  {device_battery_percentage} ",
-    "on-click": "hyprctl dispatch -- exec '[float]' blueman-manager"
+    "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"blueman-manager\", { float = true })'"
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -113,9 +113,16 @@
     },
     "on-click": "pavucontrol"
   },
+  "ext/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-id": true,
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'"
+  },
   "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
     "show-special": false,
     "persistent-workspaces": {
       "*": 5
@@ -133,7 +140,7 @@
   },
   "custom/archlogo": {
     "format": " ",
-    "on-click": "hyprctl dispatch exec '[float; move 5 45; minsize 864 464; maxsize 864 464] kitty --hold fastfetch'"
+    "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"kitty --hold fastfetch\", { float = true, move = { \"5\", \"45\" }, min_size = { 864, 464 }, max_size = { 864, 464 } })'"
   },
   "custom/power": {
     "format": "  ",

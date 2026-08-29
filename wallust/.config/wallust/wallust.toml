@@ -43,8 +43,11 @@ check_contrast = true
 btop.template = 'colors-btop.theme'
 btop.target = '~/.config/btop/themes/colors-btop.theme'
 
-hyprland.template = 'colors-hyprland.conf'
-hyprland.target = '~/.config/hypr/colors-hyprland.conf'
+hyprland.template = 'colors-hyprland.lua'
+hyprland.target = '~/.config/hypr/colors-hyprland.lua'
+
+hyprlock.template = 'colors-hyprland.conf'
+hyprlock.target = '~/.config/hypr/colors-hyprland.conf'
 
 tmux.template = 'colors-tmux.conf'
 tmux.target = '~/.tmux/colors-tmux.conf'
