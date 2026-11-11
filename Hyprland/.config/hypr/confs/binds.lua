@@ -60,8 +60,7 @@ end
 -- Cycle through workspaces
 hl.bind("ALT + grave", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind("ALT + SHIFT + grave", hl.dsp.focus({ workspace = "r-1" }))
-hl.bind(mainMod .. " + grave", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + SHIFT + grave", hl.dsp.focus({ workspace = "e-1" }))
+-- (SUPER + grave is reserved for the quickshell overview, bound above)
 
 -- Group management
 hl.bind(mainMod .. " + ALT + T", hl.dsp.group.toggle())
